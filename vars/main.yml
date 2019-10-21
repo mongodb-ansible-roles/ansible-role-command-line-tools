@@ -1,0 +1,12 @@
+---
+macos_major_version: "{{ ansible_distribution_version.split('.')[0] }}"
+macos_minor_version: "{{ ansible_distribution_version.split('.')[1] }}"
+macos_full_version: "{{ macos_major_version }}.{{ macos_minor_version }}"
+command_line_tools_version_urls:
+  "10.8": http://boxes.10gen.com/build/command_line_tools_for_osx_mountain_lion_april_2014.dmg
+  "10.9": http://boxes.10gen.com/build/commandlinetoolsosx10.9forxcode6.2.dmg
+  "10.10": http://boxes.10gen.com/build/Command_Line_Tools_OS_X_10.10_for_Xcode_7.2.dmg
+  "10.11": https://s3.amazonaws.com/boxes.10gen.com/build/xcode/Command_Line_Tools_OS_X_10.11_for_Xcode_7.2.dmg
+  "10.12": https://s3.amazonaws.com/boxes.10gen.com/build/xcode/Command_Line_Tools_macOS_10.12_for_Xcode_8.3.dmg
+  "10.13": https://s3.amazonaws.com/boxes.10gen.com/build/xcode/Command_Line_Tools_macOS_10.13_for_Xcode_9.2.dmg
+  "10.14": https://s3.amazonaws.com/boxes.10gen.com/build/xcode/Command_Line_Tools_macOS_10.14_for_Xcode_10.dmg

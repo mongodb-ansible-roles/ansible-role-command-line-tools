@@ -1,0 +1,12 @@
+---
+galaxy_info:
+  author: MongoDB
+  description: Installs a pinned version of command line tools for macos
+  license: Apache
+  min_ansible_version: 2.8
+  platforms:
+    - name: MacOSX
+      versions:
+        - "10.14"
+  galaxy_tags:
+    - command-line-tools

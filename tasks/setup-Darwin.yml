@@ -1,0 +1,39 @@
+---
+- name: Check if Command Line Tools are installed
+  become: true
+  stat:
+    path: /Library/Developer/CommandLineTools
+  register: clt
+
+- name: Force clear any old files
+  block:
+    - name: Clear old CommandLineTools dmg
+      file:
+        path: "{{ command_line_tools_dest }}"
+        state: absent
+    - name: Clear old CommandLineTools directory
+      file:
+        path: /Library/Developer/CommandLineTools
+        state: absent
+  when: command_line_tools_force_install
+
+- name: Download and install Command Line Tools
+  become: true
+  block:
+    - name: Download command line tools dmg
+      get_url:
+        url: "{{ command_line_tools_url }}"
+        dest: "{{ command_line_tools_dest }}"
+        mode: "0755"
+    - name: Mount dmg
+      command: hdiutil attach {{ command_line_tools_dest }} -mountpoint {{ command_line_tools_mount_path }}
+    - debug:
+        msg: "{{command_line_tools_mount_path}}"
+    - name: Get pkg path
+      command: find '/Volumes/osx-command-line-tools' -name *.pkg -o -name *.mpkg
+      register: pkg
+    - name: Install dmg
+      shell: installer -package "{{ pkg.stdout }}" -target "/"
+    - name: Detatch dmg
+      command: hdiutil detach "{{ command_line_tools_mount_path }}"
+  when: not clt.stat.exists or command_line_tools_force_install
