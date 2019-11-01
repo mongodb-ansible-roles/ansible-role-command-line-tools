@@ -9,4 +9,4 @@ command_line_tools_version_urls:
   "10.11": https://s3.amazonaws.com/boxes.10gen.com/build/xcode/Command_Line_Tools_OS_X_10.11_for_Xcode_7.2.dmg
   "10.12": https://s3.amazonaws.com/boxes.10gen.com/build/xcode/Command_Line_Tools_macOS_10.12_for_Xcode_8.3.dmg
   "10.13": https://s3.amazonaws.com/boxes.10gen.com/build/xcode/Command_Line_Tools_macOS_10.13_for_Xcode_9.2.dmg
-  "10.14": https://s3.amazonaws.com/boxes.10gen.com/build/xcode/Command_Line_Tools_macOS_10.14_for_Xcode_10.dmg
+  "10.14": https://s3.amazonaws.com/boxes.10gen.com/build/xcode/Command_Line_Tools_macOS_10.14_for_Xcode_10.2.dmg
