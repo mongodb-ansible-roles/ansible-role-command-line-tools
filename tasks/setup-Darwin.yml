@@ -33,7 +33,7 @@
       command: find '/Volumes/osx-command-line-tools' -name *.pkg -o -name *.mpkg
       register: pkg
     - name: Install dmg
-      shell: installer -package "{{ pkg.stdout }}" -target "/"
+      shell: installer -package "{{ pkg.stdout }}" -target "/" -allowUntrusted
     - name: Detatch dmg
       command: hdiutil detach "{{ command_line_tools_mount_path }}"
   when: not clt.stat.exists or command_line_tools_force_install
