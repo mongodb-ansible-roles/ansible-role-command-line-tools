@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/mongodb-ansible-roles/ansible-role-command-line-tools/compare/v1.0.1...v1.1.0) (2019-11-01)
+
+
+### Features
+
+* Updated command line tools dmg ([d795846](https://github.com/mongodb-ansible-roles/ansible-role-command-line-tools/commit/d795846bb19f24b10e46c288f33f358b16cf4739))
+
 ## [1.0.1](https://github.com/mongodb-ansible-roles/ansible-role-command-line-tools/compare/v1.0.0...v1.0.1) (2019-11-01)
 
 
