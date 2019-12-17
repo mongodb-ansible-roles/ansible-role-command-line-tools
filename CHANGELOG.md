@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/mongodb-ansible-roles/ansible-role-command-line-tools/compare/v1.1.0...v1.1.1) (2019-12-17)
+
+
+### Bug Fixes
+
+* Added become permissions ([fa905cd](https://github.com/mongodb-ansible-roles/ansible-role-command-line-tools/commit/fa905cdb42d257f7d4ffef5edd0273bec2e29d03))
+
 # [1.1.0](https://github.com/mongodb-ansible-roles/ansible-role-command-line-tools/compare/v1.0.1...v1.1.0) (2019-11-01)
 
 
