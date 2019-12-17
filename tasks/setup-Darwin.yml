@@ -8,10 +8,12 @@
 - name: Force clear any old files
   block:
     - name: Clear old CommandLineTools dmg
+      become: true
       file:
         path: "{{ command_line_tools_dest }}"
         state: absent
     - name: Clear old CommandLineTools directory
+      become: true
       file:
         path: /Library/Developer/CommandLineTools
         state: absent
@@ -27,8 +29,6 @@
         mode: "0755"
     - name: Mount dmg
       command: hdiutil attach {{ command_line_tools_dest }} -mountpoint {{ command_line_tools_mount_path }}
-    - debug:
-        msg: "{{command_line_tools_mount_path}}"
     - name: Get pkg path
       command: find '/Volumes/osx-command-line-tools' -name *.pkg -o -name *.mpkg
       register: pkg
