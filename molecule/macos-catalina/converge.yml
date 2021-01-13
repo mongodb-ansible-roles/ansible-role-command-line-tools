@@ -1,0 +1,7 @@
+---
+- name: Converge macos-catalina
+  hosts: macos-catalina
+  tasks:
+    - name: "Include ansible-role-command-line-tools"
+      include_role:
+        name: "ansible-role-command-line-tools"

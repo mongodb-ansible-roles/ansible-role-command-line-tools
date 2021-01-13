@@ -9,4 +9,7 @@ galaxy_info:
       versions:
         - "10.14"
   galaxy_tags:
-    - command-line-tools
+    - command
+    - line
+    - tools
+    - commandlinetools
